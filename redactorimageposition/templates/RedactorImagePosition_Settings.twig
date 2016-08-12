@@ -1,0 +1,68 @@
+{#
+/**
+ * Redactor Image Position plugin for Craft CMS
+ *
+ * Redactor Image Position Settings.twig
+ *
+ * @author    Nicholas O'Donnell
+ * @copyright Copyright (c) 2016 Nicholas O'Donnell
+ * @link      http://nicholasodo.com
+ * @package   RedactorImagePosition
+ * @since     1.0.0
+ */
+#}
+
+{% import '_includes/forms' as forms %}
+
+{{ forms.editableTableField({
+    label: 'Figure Config',
+    instructions: 'Specify figure classes/configuration.',
+    id: 'figureConfig',
+    name: 'figureConfig',
+    static: true,
+    rows: settings['figureConfig'],
+    cols: [
+        {
+            heading: 'Setting',
+            type: 'singleline',
+            class: 'code',
+            width: '20%'
+        },
+        {
+            heading: 'Value',
+            type: 'singleline',
+            class: 'code js-make-enabled',
+            width: '80%'
+        }
+    ]
+}) }}
+
+{{ forms.hidden({
+    name: "figureConfig[0][0]",
+    value: "figureWrap"
+}) }}
+
+{{ forms.hidden({
+    name: "figureConfig[1][0]",
+    value: "figureLeft"
+}) }}
+
+{{ forms.hidden({
+    name: "figureConfig[2][0]",
+    value: "figureRight"
+}) }}
+
+{{ forms.hidden({
+    name: "figureConfig[3][0]",
+    value: "figureFull"
+}) }}
+
+{{ forms.hidden({
+    name: "figureConfig[4][0]",
+    value: "imageClass"
+}) }}
+
+{{ forms.hidden({
+    name: "figureConfig[5][0]",
+    value: "captionClass"
+}) }}
