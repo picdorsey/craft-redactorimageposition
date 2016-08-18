@@ -2,9 +2,10 @@
     {
         "version": "1.0.0",
         "downloadUrl": "https://github.com/nicholasodo/craft-redactorimageposition/archive/master.zip",
-        "date": "2016-08-12T14:00:00+00:00",
+        "date": "2016-08-18T15:49:03-04:00",
         "notes": [
-            "[Added] Initial release"
+            "[Improved] Plugin icon.",
+            "[Fixed] Installation error when json array is null."
         ]
     }
 ]

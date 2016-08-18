@@ -31,6 +31,10 @@ class RedactorImagePositionService extends BaseApplicationComponent
 
             $json = json_decode($contents, true);
 
+            if ($json == null) {
+                continue;
+            }
+
             if (array_key_exists('plugins', $json) && in_array('imagePosition', $json['plugins'])) {
                 continue;
             }
