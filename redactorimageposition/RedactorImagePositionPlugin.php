@@ -6,7 +6,7 @@
  * @copyright Copyright (c) 2016 Nicholas O'Donnell
  * @link      http://nicholasodo.com
  * @package   RedactorImagePosition
- * @since     1.0.0
+ * @since     1.0.1
  */
 
 namespace Craft;
@@ -76,7 +76,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     /**
