@@ -54,7 +54,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/picdorsey/craft-redactorimageposition/blob/master/README.md';
+        return 'https://github.com/picdorsey/craft-redactorimageposition/blob/master/readme.md';
     }
 
     /**
