@@ -4,9 +4,9 @@
  *
  * RedactorImagePosition Service
  *
- * @author    Nicholas O'Donnell
- * @copyright Copyright (c) 2016 Nicholas O'Donnell
- * @link      http://nicholasodo.com
+ * @author    Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @link      http://picdorsey.com
  * @package   RedactorImagePosition
  * @since     1.0.1
  */

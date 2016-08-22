@@ -2,9 +2,9 @@
 /**
  * Redactor Image Position plugin for Craft CMS
  *
- * @author    Nicholas O'Donnell
- * @copyright Copyright (c) 2016 Nicholas O'Donnell
- * @link      http://nicholasodo.com
+ * @author    Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @link      http://picdorsey.com
  * @package   RedactorImagePosition
  * @since     1.0.1
  */
@@ -54,7 +54,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/nicholasodo/craft-redactorimageposition/blob/master/README.md';
+        return 'https://github.com/picdorsey/craft-redactorimageposition/blob/master/README.md';
     }
 
     /**
@@ -66,7 +66,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/nicholasodo/craft-redactorimageposition/master/releases.json';
+        return 'https://raw.githubusercontent.com/picdorsey/craft-redactorimageposition/master/releases.json';
     }
 
     /**
@@ -99,7 +99,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     public function getDeveloper()
     {
-        return 'Nicholas O\'Donnell';
+        return 'Piccirilli Dorsey, Inc.';
     }
 
     /**
@@ -109,7 +109,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     public function getDeveloperUrl()
     {
-        return 'http://nicholasodo.com';
+        return 'http://picdorsey.com';
     }
 
     /**
