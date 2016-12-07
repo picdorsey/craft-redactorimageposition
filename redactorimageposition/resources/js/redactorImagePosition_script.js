@@ -30,8 +30,6 @@ RedactorPlugins.imagePosition = function () {
             + '<script>var $buttons=$("#redactor-image-position-field div"),$position=$("#redactor-image-position");$buttons.on("click",function(){var t=$(this),i=t.data("option");return $buttons.removeClass("active"),t.addClass("active"),$position.val(i),!1});</script>';
 
             this.imagePosition.events();
-
-            this.imagePosition.hasRan = false;
         },
 
         events: function () {
