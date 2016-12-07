@@ -6,7 +6,7 @@
  * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
  * @link      http://picdorsey.com
  * @package   RedactorImagePosition
- * @since     1.0.1
+ * @since     1.0.2
  */
 
 namespace Craft;
@@ -20,7 +20,6 @@ class RedactorImagePositionPlugin extends BasePlugin
     {
         parent::init();
         if (craft()->request->isCpRequest()) {
-            $this->_renderCSS();
             $this->_renderJS();
         }
     }
@@ -76,7 +75,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.1';
+        return '1.0.2';
     }
 
     /**
@@ -203,7 +202,7 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     private function _renderCSS()
     {
-        craft()->templates->includeCssResource('redactorimageposition/css/style.css');
+        //
     }
 
     /**
@@ -220,7 +219,7 @@ class RedactorImagePositionPlugin extends BasePlugin
                 figureConfig[element[0]] = element[1];
             });
         ');
-        craft()->templates->includeJsResource('redactorimageposition/js/script.js');
+        craft()->templates->includeJsResource('redactorimageposition/js/redactorImagePosition_script.js');
     }
 
 }

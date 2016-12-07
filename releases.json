@@ -1,11 +1,10 @@
 [
     {
-        "version": "1.0.1",
+        "version": "1.0.2",
         "downloadUrl": "https://github.com/picdorsey/craft-redactorimageposition/archive/master.zip",
-        "date": "2016-08-18T15:49:03-04:00",
+        "date": "2016-12-07T11:03:03-04:00",
         "notes": [
-            "[Improved] Plugin icon.",
-            "[Fixed] Installation error when json array is null."
+            "[Fixed] Options showing twice."
         ]
     }
 ]

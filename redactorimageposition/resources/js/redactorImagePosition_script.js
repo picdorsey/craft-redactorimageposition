@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
  * @link      http://picdorsey.com
  * @package   RedactorImagePosition
- * @since     1.0.1
+ * @since     1.0.2
  */
 
 if (!RedactorPlugins) var RedactorPlugins = {};
@@ -18,7 +18,7 @@ RedactorPlugins.imagePosition = function () {
             this.imagePosition.figureClasses = figureConfig;
 
             this.imagePosition.positionTemplate = String()
-            + '<section>'
+            + '<section id="redactor-image-position">'
             + '    <label>Position</label>'
             + '    <div class="btngroup big" id="redactor-image-position-field">'
             + '        <div title="Left" class="btn big" data-icon="posleft" data-option="left"></div>'
@@ -30,12 +30,14 @@ RedactorPlugins.imagePosition = function () {
             + '<script>var $buttons=$("#redactor-image-position-field div"),$position=$("#redactor-image-position");$buttons.on("click",function(){var t=$(this),i=t.data("option");return $buttons.removeClass("active"),t.addClass("active"),$position.val(i),!1});</script>';
 
             this.imagePosition.events();
+
+            this.imagePosition.hasRan = false;
         },
 
         events: function () {
             $('body').on('click', '.elementselectormodal .submit', this.imagePosition.onModalSave.bind(this));
             $('body').on('click', '#redactor-modal-button-action', this.imagePosition.onModalSave.bind(this));
-            // this.core.element().on('modalOpened.callback.redactor', this.imagePosition.onModalSave.bind(this));
+
             this.core.element().on('modalOpened.callback.redactor', this.imagePosition.onModalOpen.bind(this));
         },
 
