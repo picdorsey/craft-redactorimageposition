@@ -1,10 +1,11 @@
 [
     {
-        "version": "1.0.2",
+        "version": "1.0.3",
         "downloadUrl": "https://github.com/picdorsey/craft-redactorimageposition/archive/master.zip",
-        "date": "2016-12-07T11:03:03-04:00",
+        "date": "2017-01-12T17:00:00-00:00",
         "notes": [
-            "[Fixed] Options showing twice."
+            "[Fixed] Derive the existing position from the classes found on the figure element (thanks @rsanchez)!",
+            "[Fixed] Checks to see if there's already a figure element before wrapping onModalSave (thanks @rsanchez)!"
         ]
     }
 ]
