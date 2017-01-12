@@ -49,6 +49,17 @@ RedactorPlugins.imagePosition = function () {
             var $redactorImage = $('#redactor-modal img');
             var src = $redactorImage.attr('src');
             var $bodyImage = $('.redactor-box img[src*="' + src + '"]');
+            var $figure = $bodyImage.closest('figure');
+
+            // get existing figure position
+            if ($figure.hasClass(this.imagePosition.figureClasses['figureLeft'])) {
+                $bodyImage.data('pos', 'left');
+            } else if ($figure.hasClass(this.imagePosition.figureClasses['figureRight'])) {
+                $bodyImage.data('pos', 'right');
+            } else if ($figure.hasClass(this.imagePosition.figureClasses['figureFull'])) {
+                $bodyImage.data('pos', 'full');
+            }
+
             var pos = $bodyImage.data('pos') || 'full';
             var $activePosition = $positions.filter('[data-option*="' + pos +'"]');
 
@@ -75,11 +86,20 @@ RedactorPlugins.imagePosition = function () {
             var $image = $(elem);
             var c = $image.data('pos');
             var $caption = ($image.next('figcaption').length > 0) ? $image.next('figcaption') : $image.parent().next('figcaption');
+            var $figure = $image.closest('figure');
 
             if (c !== 'left' && c !== 'right' && c !== 'full') return;
 
-            $image.wrap(this.imagePosition.figureClasses['figureWrap']);
-            var $figure = $image.parent('figure').unwrap();
+            if ($figure.length === 0) {
+                // wrap in <figure> element if not already wrapped
+                $image.wrap(this.imagePosition.figureClasses['figureWrap']);
+                $figure = $image.parent('figure').unwrap();
+            } else {
+                // remove existing positioning on figure
+                $figure.removeClass(this.imagePosition.figureClasses['figureLeft']);
+                $figure.removeClass(this.imagePosition.figureClasses['figureRight']);
+                $figure.removeClass(this.imagePosition.figureClasses['figureFull']);
+            }
 
             $image.addClass(this.imagePosition.figureClasses['imageClass']);
             $caption.addClass(this.imagePosition.figureClasses['captionClass']);
