@@ -49,6 +49,17 @@ RedactorPlugins.imagePosition = function () {
             var $redactorImage = $('#redactor-modal img');
             var src = $redactorImage.attr('src');
             var $bodyImage = $('.redactor-box img[src*="' + src + '"]');
+            var $figure = $bodyImage.closest('figure');
+
+            // get existing figure position
+            if ($figure.hasClass(this.imagePosition.figureClasses['figureLeft'])) {
+                $bodyImage.data('pos', 'left');
+            } else if ($figure.hasClass(this.imagePosition.figureClasses['figureRight'])) {
+                $bodyImage.data('pos', 'right');
+            } else if ($figure.hasClass(this.imagePosition.figureClasses['figureFull'])) {
+                $bodyImage.data('pos', 'full');
+            }
+
             var pos = $bodyImage.data('pos') || 'full';
             var $activePosition = $positions.filter('[data-option*="' + pos +'"]');
 
