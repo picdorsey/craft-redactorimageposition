@@ -161,13 +161,13 @@ class RedactorImagePositionPlugin extends BasePlugin
      */
     protected function defineSettings()
     {
-        return [
-            'figureConfig' => [
+        return array(
+            'figureConfig' => array(
                 AttributeType::Mixed,
                 'label' => 'Figure config settings',
                 'default' => '[["figureWrap","<figure class=\"c-figure c-figure--inline\"><\/figure>"],["figureLeft","c-figure--left"],["figureRight","c-figure--right"],["figureFull","c-figure--full"],["imageClass","c-figure__image"],["captionClass","c-figure__caption"]]'
-            ]
-        ];
+            )
+        );
     }
 
     /**

@@ -7,5 +7,13 @@
             "[Fixed] Derive the existing position from the classes found on the figure element (thanks @rsanchez)!",
             "[Fixed] Checks to see if there's already a figure element before wrapping onModalSave (thanks @rsanchez)!"
         ]
+    },
+    {
+        "version": "1.0.4",
+        "downloadUrl": "https://github.com/picdorsey/craft-redactorimageposition/archive/master.zip",
+        "date": "2017-07-27T17:00:00-00:00",
+        "notes": [
+            "[Fixed] Support old array syntax.",
+        ]
     }
 ]
